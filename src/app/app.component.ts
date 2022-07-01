@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +7,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-course';
+
+  count = 0;
+
+  filterCount = {};
+
+  handleChangeCount(e: number) {
+    console.log(e);
+  }
+
+  handleChange(e: any) {
+    this.filterCount = e;
+  }
 }

@@ -1,1 +1,5 @@
-<p>counter works!</p>
+<div class="d-flex">
+  <button class="btn btn-light border" (click)="dec()">-</button>
+  <input class="form-control" type="text" readonly [value]="count" #opa />
+  <button class="btn btn-light border" (click)="inc()">+</button>
+</div>

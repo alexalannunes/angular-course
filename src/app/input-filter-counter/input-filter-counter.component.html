@@ -1,0 +1,27 @@
+<ul class="list-group mt-2">
+  <li
+    class="list-group-item d-flex justify-content-between"
+    *ngFor="let item of itens"
+  >
+    <span>
+      {{ item.name }}:
+      <strong>{{ item.count }}</strong>
+    </span>
+    <div class="d-flex" style="gap: 10px">
+      <button
+        class="btn btn-light border d-flex justify-content-center align-items-center"
+        (click)="handleDecrement(item.id)"
+        [disabled]="item.count <= item.min"
+      >
+        -
+      </button>
+      <button
+        class="btn btn-light border d-flex justify-content-center align-items-center"
+        (click)="handleIncrement(item.id)"
+        [disabled]="item.count >= item.max"
+      >
+        +
+      </button>
+    </div>
+  </li>
+</ul>

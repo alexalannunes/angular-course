@@ -1,3 +1,17 @@
-<app-my-form></app-my-form>
+<div class="container">
+  <app-my-form></app-my-form>
 
-<app-input-property [title]="title"></app-input-property>
+  <app-input-property [title]="title"></app-input-property>
+
+  <app-counter
+    [count]="count"
+    (event)="handleChangeCount($event)"
+  ></app-counter>
+
+  <app-input-filter-counter
+    (handleChange)="handleChange($event)"
+  ></app-input-filter-counter>
+  {{ filterCount | json }}
+
+  <app-button></app-button>
+</div>

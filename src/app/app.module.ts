@@ -7,9 +7,11 @@ import { AppComponent } from './app.component';
 import { MyFormModule } from './my-form/my-form.module';
 import { InputPropertyComponent } from './input-property/input-property.component';
 import { CounterComponent } from './counter/counter.component';
+import { InputFilterCounterComponent } from './input-filter-counter/input-filter-counter.component';
+import { ButtonComponent } from './button/button.component';
 
 @NgModule({
-  declarations: [AppComponent, InputPropertyComponent, CounterComponent],
+  declarations: [AppComponent, InputPropertyComponent, CounterComponent, InputFilterCounterComponent, ButtonComponent],
   imports: [BrowserModule, NgbModule, FormsModule, MyFormModule],
   providers: [],
   bootstrap: [AppComponent],
